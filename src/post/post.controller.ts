@@ -19,7 +19,9 @@ import { Post as PostEntity, SerializedPost } from './entities/post.entity';
 import { AuthGuard } from 'src/auth/guards/auth.guard';
 import { Roles } from 'src/auth/roles/roles.decorator';
 import { Role } from 'src/auth/roles/role.enum';
+import { ApiTags } from '@nestjs/swagger/dist/decorators';
 
+@ApiTags('post')
 @Controller('post')
 export class PostController {
   constructor(private readonly postService: PostService) {}

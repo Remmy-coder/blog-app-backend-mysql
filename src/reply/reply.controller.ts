@@ -14,7 +14,9 @@ import { UpdateReplyDto } from './dto/update-reply.dto';
 import { AuthGuard } from 'src/auth/guards/auth.guard';
 import { SETTINGS } from 'src/app.utils';
 import { Reply } from './entities/reply.entity';
+import { ApiTags } from '@nestjs/swagger/dist/decorators';
 
+@ApiTags('reply')
 @Controller('reply')
 export class ReplyController {
   constructor(private readonly replyService: ReplyService) {}
